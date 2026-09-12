@@ -1,0 +1,12 @@
+先短接boot，之后机器人上电
+然后tabby进串口，用网络把上面的这俩文件传到主目录
+之后执行
+hpmtool -u -c hpm5e00 erase_flash
+hpmtool -u -c hpm5e00 write_flash 0x400 ethercanfd_v1.0.5-20260829.bin
+sudo dpkg -i linux-image-current-rockchip-rk3588_1.1.4_arm64.deb
+
+之后输入reboot，拔掉boot引脚的短接
+
+等reboot开机之后，给机器人下电
+
+一定要注意先后顺序！！！！！！！！！！！！！
